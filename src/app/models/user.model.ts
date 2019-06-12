@@ -7,4 +7,5 @@ export class User {
   userPhone: string;
   roleId: number;
   statusId: number;
+  userPassword: string;
 }

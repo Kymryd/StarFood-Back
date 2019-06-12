@@ -18,7 +18,8 @@ export class AddCountryComponent {
   createCountry(): void {
     this.countryService.createCountry(this.country)
       .subscribe( data => {
-        alert('country created successfully.');
+        // alert('country created successfully.');
+        this.router.navigateByUrl('/countries');
       });
 
   }
