@@ -1,0 +1,37 @@
+<div class="col-md-6">
+  <h2 class="text-center">Add User</h2>
+  <form>
+    <div class="form-group">
+      <label for="userEmail">Email address:</label>
+      <input type="email" [(ngModel)]="user.userEmail" placeholder="Email" name="userEmail" class="form-control" id="userEmail">
+    </div>
+
+    <div class="form-group">
+      <label for="userFirstname">First Name:</label>
+      <input [(ngModel)]="user.userFirstname" placeholder="First Name" name="userFirstname" class="form-control" id="userFirstname">
+    </div>
+
+    <div class="form-group">
+      <label for="userLastname">Last Name:</label>
+      <input [(ngModel)]="user.userLastname" placeholder="Last name" name="userLastname" class="form-control" id="userLastname">
+    </div>
+
+    <div class="form-group">
+      <label for="userPhone">Phone:</label>
+      <input [(ngModel)]="user.userPhone" placeholder="Phone" name="userPhone" class="form-control" id="userPhone">
+    </div>
+
+    <div class="form-group">
+      <label for="userRole">Role:</label>
+      <input [(ngModel)]="user.userRole" placeholder="Role" name="userRole" class="form-control" id="userRole">
+    </div>
+
+    <div class="form-group">
+      <label for="userStatus">Status:</label>
+      <input [(ngModel)]="user.userStatus" placeholder="Status" name="userStatus" class="form-control" id="userStatus">
+    </div>
+
+
+    <button class="btn btn-success" (click)="createUser()">Create</button>
+  </form>
+</div>
