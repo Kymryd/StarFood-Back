@@ -20,7 +20,7 @@ export class UserService {
   }
 
   public deleteUser(user) {
-    return this.http.delete(this.userUrl + '/' + user.id);
+    return this.http.delete(this.userUrl + '/' + user.userId);
   }
 
   public createUser(user) {
