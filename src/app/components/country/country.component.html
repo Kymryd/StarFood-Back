@@ -12,9 +12,10 @@
     <tbody>
     <tr *ngFor="let country of countries">
       <td class="hidden">{{country.countryId}}</td>
-      <td>{{country.countrySequence}}</td>
+      <td data-editable="true">{{country.countrySequence}}</td>
       <td>{{country.countryISO}}</td>
       <td><button class="btn btn-danger" (click)="deleteCountry(country)"> Delete country</button></td>
+      <td><button class="btn btn-danger" (click)="updateCountry(country)"> Update country</button></td>
     </tr>
     </tbody>
   </table>

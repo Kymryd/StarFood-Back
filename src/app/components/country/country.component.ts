@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { Country } from '../models/country.model';
+import { Country } from '../../models/country.model';
 import { CountryService } from './country.service';
 
 @Component({
@@ -26,6 +26,13 @@ export class CountryComponent implements OnInit {
 
   deleteCountry(country: Country): void {
     this.countryService.deleteCountry(country)
+      .subscribe( data => {
+        this.countries = this.countries.filter(u => u !== country);
+      })
+  };
+
+  updateCountry(country: Country): void {
+    this.countryService.updateCountry(country)
       .subscribe( data => {
         this.countries = this.countries.filter(u => u !== country);
       })

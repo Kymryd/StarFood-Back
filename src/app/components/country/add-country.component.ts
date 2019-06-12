@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { Country } from '../models/country.model';
+import { Country } from '../../models/country.model';
 import { CountryService } from './country.service';
 
 @Component({

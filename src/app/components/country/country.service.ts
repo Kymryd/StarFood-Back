@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-import {Country} from '../models/country.model';
+import {Country} from '../../models/country.model';
 
 
 const httpOptions = {
@@ -21,6 +21,9 @@ export class CountryService {
 
   public deleteCountry(country) {
     return this.http.delete(this.countryUrl + '/' + country.countryId);
+  }
+  public updateCountry(country) {
+    return this.http.put(this.countryUrl, country);
   }
 
   public createCountry(country) {
