@@ -15,6 +15,9 @@ import {AddUserComponent} from './components/user/add-user.component';
 import {UserService} from './components/user/user.service';
 import {LangService} from './components/lang/lang.service';
 import { NavComponent } from './components/nav/nav.component';
+import { RoleComponent } from './components/role/role.component';
+import {RoleService} from './components/role/role.service';
+import {AddRoleComponent} from './components/role/add-role.component';
 
 
 @NgModule({
@@ -26,7 +29,9 @@ import { NavComponent } from './components/nav/nav.component';
     AddLangComponent,
     UserComponent,
     AddUserComponent,
-    NavComponent
+    NavComponent,
+    RoleComponent,
+    AddRoleComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +42,8 @@ import { NavComponent } from './components/nav/nav.component';
   providers: [
     UserService,
     CountryService,
-    LangService
+    LangService,
+    RoleService
   ],
   bootstrap: [AppComponent]
 })
