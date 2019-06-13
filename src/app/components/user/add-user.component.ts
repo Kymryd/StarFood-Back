@@ -19,10 +19,14 @@ export class AddUserComponent {
   createUser(): void {
     this.userService.createUser(this.user)
       .subscribe( data => {
-        alert('User created successfully.');
-        // this.router.navigateByUrl('/users');
+        // alert('User created successfully.');
+        this.gotoUserList();
       });
 
+  }
+
+  gotoUserList() {
+    this.router.navigateByUrl('/users');
   }
 
 }
