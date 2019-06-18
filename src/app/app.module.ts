@@ -18,6 +18,15 @@ import { NavComponent } from './components/nav/nav.component';
 import { RoleComponent } from './components/role/role.component';
 import {RoleService} from './components/role/role.service';
 import {AddRoleComponent} from './components/role/add-role.component';
+import { ProductComponent } from './components/product/product.component';
+import {AddProductComponent} from './components/product/add-product.component';
+import {ProductService} from './components/product/product.service';
+import { CategoryComponent } from './components/category/category.component';
+import {AddCategoryComponent} from './components/category/add-category.component';
+import {CategoryService} from './components/category/category.service';
+import { ProductTypeComponent } from './components/product-type/product-type.component';
+import {ProductTypeService} from './components/product-type/product-type.service';
+import {AddProductTypeComponent} from './components/product-type/add-product-type.component';
 
 
 @NgModule({
@@ -31,7 +40,13 @@ import {AddRoleComponent} from './components/role/add-role.component';
     AddUserComponent,
     NavComponent,
     RoleComponent,
-    AddRoleComponent
+    AddRoleComponent,
+    ProductComponent,
+    AddProductComponent,
+    CategoryComponent,
+    AddCategoryComponent,
+    ProductTypeComponent,
+    AddProductTypeComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +58,10 @@ import {AddRoleComponent} from './components/role/add-role.component';
     UserService,
     CountryService,
     LangService,
-    RoleService
+    RoleService,
+    ProductService,
+    CategoryService,
+    ProductTypeService
   ],
   bootstrap: [AppComponent]
 })
