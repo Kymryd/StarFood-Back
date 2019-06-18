@@ -18,9 +18,13 @@ export class AddLangComponent {
   createLang(): void {
     this.langService.createLang(this.lang)
       .subscribe( data => {
-        alert('lang created successfully.');
+        this.gotoLangsList();
       });
 
+  }
+
+  gotoLangsList() {
+    this.router.navigateByUrl('/langs');
   }
 
 }

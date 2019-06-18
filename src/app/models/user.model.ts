@@ -7,7 +7,7 @@ export class User {
   userLastname: string;
   userEmail: string;
   userPhone: string;
-  roleByRoleId: Role;
+  roleId: number;
   statusId: number;
   userPassword: string;
 }

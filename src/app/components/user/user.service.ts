@@ -2,6 +2,7 @@ import {Injectable} from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { User } from '../../models/user.model';
+import {RoleService} from '../role/role.service';
 
 
 const httpOptions = {
@@ -25,6 +26,12 @@ export class UserService {
 
   public createUser(user) {
     return this.http.post<User>(this.userUrl, user);
+  }
+
+  public roleList() {
+
+
+
   }
 
 }
