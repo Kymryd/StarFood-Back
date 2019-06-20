@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { Role } from '../../models/role.model';
-import { RoleService } from './role.service';
+import { RoleService } from '../../services/role.service';
 
 @Component({
   templateUrl: './add-role.component.html'

@@ -1,8 +1,8 @@
 import {Injectable} from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-import { User } from '../../models/user.model';
-import {RoleService} from '../role/role.service';
+import { User } from '../models/user.model';
+import {RoleService} from './role.service';
 
 
 const httpOptions = {
@@ -15,8 +15,10 @@ export class UserService {
   constructor(private http: HttpClient) {}
 
   private userUrl = 'http://localhost:8080/starfood/users';
+  private roleService: RoleService;
 
   public getUsers() {
+
     return this.http.get<User[]>(this.userUrl);
   }
 
@@ -29,9 +31,7 @@ export class UserService {
   }
 
   public roleList() {
-
-
-
+    return this.roleService.getRoles();
   }
 
 }

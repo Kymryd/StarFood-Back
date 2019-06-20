@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { Product } from '../../models/product.model';
-import { ProductService } from './product.service';
+import { ProductService } from '../../services/product.service';
 
 @Component({
   selector: 'app-product',
@@ -12,6 +12,7 @@ import { ProductService } from './product.service';
 export class ProductComponent implements OnInit {
 
   products: Product[];
+  availableProducts: Product[];
 
   constructor(private router: Router, private productService: ProductService) {
 
@@ -22,6 +23,13 @@ export class ProductComponent implements OnInit {
       .subscribe( data => {
         this.products = data;
       });
+
+    this.productService.getAvailableProducts()
+      .subscribe( data => {
+        this.availableProducts = data;
+      });
+
+
   };
 
   deleteProduct(product: Product): void {

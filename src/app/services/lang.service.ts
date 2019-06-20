@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-import {Lang} from '../../models/lang.model';
+import {Lang} from '../models/lang.model';
 
 
 const httpOptions = {

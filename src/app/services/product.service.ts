@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-import {Product} from '../../models/product.model';
+import {Product} from '../models/product.model';
 
 
 const httpOptions = {
@@ -25,6 +25,10 @@ export class ProductService {
 
   public createProduct(product) {
     return this.http.post<Product>(this.productUrl, product);
+  }
+
+  public getAvailableProducts() {
+    return this.http.get<Product[]>(this.productUrl + '/status/1');
   }
 
 }

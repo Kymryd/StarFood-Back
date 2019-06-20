@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { Country } from '../../models/country.model';
-import { CountryService } from './country.service';
+import { CountryService } from '../../services/country.service';
 
 @Component({
   templateUrl: './add-country.component.html'

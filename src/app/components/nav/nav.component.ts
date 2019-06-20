@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
+import {LoginService} from '../../services/login.service';
 
 @Component({
   selector: 'app-nav',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavComponent implements OnInit {
   title = 'starfood-back';
-  constructor() { }
+  constructor(private router: Router, private loginService: LoginService) { }
 
   ngOnInit() {
   }
+
+  logout() {
+    this.loginService.logout().subscribe(() => {
+      this.router.navigateByUrl('/login');
+    }, () => {
+      alert('ko');
+    }
+    )
+   }
 
 }

@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-import {ProductType} from '../../models/product-type.model';
+import {ProductType} from '../models/product-type.model';
 
 
 const httpOptions = {

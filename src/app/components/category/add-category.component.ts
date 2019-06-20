@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { Category } from '../../models/category.model';
-import { CategoryService } from './category.service';
+import { CategoryService } from '../../services/category.service';
 
 @Component({
   templateUrl: './add-category.component.html'

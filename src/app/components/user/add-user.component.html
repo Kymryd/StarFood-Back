@@ -22,9 +22,17 @@
     </div>
 
     <div class="form-group">
-      <label for="roleId">Rolette ruche:</label>
+      <label for="roleId">RoleId:</label>
       <input [(ngModel)]="user.roleId" placeholder="Role" name="roleId" class="form-control" id="roleId">
     </div>
+
+<!--    hey-->
+    <div class="form-group">
+      <label for="roulette">Rolette ruche:</label>
+      <select id="roulette" ng-options="role.roleShortDescription as role.roleShortDescription for role in roles track by role.roleId" ng-model="user.roleId"></select>
+<!--      <pre>{{user.role | json}}</pre>-->
+      </div>
+<!--    hey-->
 
     <div class="form-group">
       <label for="statusId">Status:</label>

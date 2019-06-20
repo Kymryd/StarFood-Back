@@ -10,4 +10,5 @@ export class User {
   roleId: number;
   statusId: number;
   userPassword: string;
+  role: Role;
 }

@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { ProductType } from '../../models/product-type.model';
-import { ProductTypeService } from './product-type.service';
+import { ProductTypeService } from '../../services/product-type.service';
 
 @Component({
   templateUrl: './add-product-type.component.html'

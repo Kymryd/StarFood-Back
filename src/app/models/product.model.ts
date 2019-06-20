@@ -6,4 +6,5 @@ export class Product {
   statusId: number;
   categoryId: number;
   productTypeId: number;
+
 }

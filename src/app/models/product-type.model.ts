@@ -1,6 +1,6 @@
 export class ProductType {
 
-productTypeId: number;
-productTypeShortDescription: string;
+  productTypeId: number;
+  productTypeShortDescription: string;
 
 }

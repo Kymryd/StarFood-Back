@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { Lang } from '../../models/lang.model';
-import { LangService } from './lang.service';
+import { LangService } from '../../services/lang.service';
 
 @Component({
   templateUrl: './add-lang.component.html'
