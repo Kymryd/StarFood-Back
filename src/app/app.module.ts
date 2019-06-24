@@ -52,6 +52,12 @@ import { HomeComponent } from './components/home/home.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { LoginComponent } from './components/login/login.component';
 import {LoginService} from './services/login.service';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { KitchenComponent } from './components/kitchen/kitchen.component';
+import { CounterComponent } from './components/counter/counter.component';
+import { StatusComponent } from './components/status/status.component';
+import {StatusService} from './services/status.service';
+import {UpdUserComponent} from './components/user/upd-user.component';
 
 
 @NgModule({
@@ -88,13 +94,20 @@ import {LoginService} from './services/login.service';
     AddStockComponent,
     HomeComponent,
     FooterComponent,
-    LoginComponent
+    LoginComponent,
+    // AddStatusComponent,
+    StatusComponent,
+// TODO : developper components :
+    KitchenComponent,
+    CounterComponent,
+    UpdUserComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    AngularFontAwesomeModule
   ],
   providers: [
     UserService,
@@ -111,7 +124,8 @@ import {LoginService} from './services/login.service';
     OrderLineService,
     RecipeService,
     StockService,
-    LoginService
+    LoginService,
+    StatusService
   ],
   bootstrap: [AppComponent]
 })
